@@ -1,0 +1,49 @@
+CBC_J.XPT: Complete Blood Count - This file contains data related to the complete blood count measurements, which include values like white blood cell count, red blood cell count, hemoglobin, hematocrit, and other related parameters.
+
+DBQ_J.XPT: Diet Behavior & Nutrition - This file includes information on dietary behaviors and nutritional intake of individuals. It contains data from dietary questionnaires.
+
+DEMO_J.XPT: Demographics - This file contains demographic information such as age, gender, race, education level, and other relevant socio-economic factors.
+
+DPQ_J.XPT: Depression Screener - This file includes data from depression screening questionnaires, assessing mental health and depression symptoms.
+
+DR1TOT_J.XPT: Dietary Interview - Total Nutrient Intakes, First Day - This file contains data on total nutrient intake from the first day of dietary recall interviews.
+
+DR2TOT_J.XPT: Dietary Interview - Total Nutrient Intakes, Second Day - This file contains data on total nutrient intake from the second day of dietary recall interviews.
+
+DS1IDS_J.XPT: Dietary Supplement Use 24-Hour - Individual Dietary Supplements, First Day - This file includes data on individual dietary supplements used in the 24 hours preceding the interview on the first day.
+
+FERTIN_J.XPT: Serum Ferritin - This file contains measurements of serum ferritin levels, which are used to assess iron stores in the body.
+
+GHB_J.XPT: Glycohemoglobin (HbA1c) - This file includes data on glycohemoglobin, which is a measure of blood sugar levels over the past three months.
+
+HEPA_J.XPT: Hepatitis - This file contains data related to hepatitis infection status and related health measures.
+
+HSCRP_J.XPT: High Sensitivity C-Reactive Protein - This file includes measurements of high sensitivity C-reactive protein, a marker of inflammation.
+
+HSQ_J.XPT: Current Health Status - This file contains data on the current health status of individuals, including information on various health conditions and general health status.
+
+MCQ_J.XPT: Medical Conditions - This file includes data on various medical conditions reported by individuals.
+
+PAQ_J.XPT: Physical Activity - This file contains data related to the physical activity levels of individuals, including frequency, duration, and types of physical activities.
+
+P_DSQIDS.XPT: Dietary Supplement Use 30-Day - Individual Dietary Supplements - This file includes data on individual dietary supplements used in the 30 days preceding the interview.
+
+P_FERTIN.XPT: Serum Ferritin - Similar to FERTIN_J.XPT, this file contains measurements of serum ferritin levels.
+
+P_FETIB.XPT: Serum Ferritin and Iron Binding Capacity - This file includes data on serum ferritin and iron binding capacity, which are used to assess iron status.
+
+P_HSCRP.XPT: High Sensitivity C-Reactive Protein - Similar to HSCRP_J.XPT, this file includes measurements of high sensitivity C-reactive protein.
+
+P_UCM.XPT: Urinary Creatinine - This file contains data on urinary creatinine levels, which are used to normalize other urinary biomarker measurements.
+
+P_UHG.XPT: Urinary Mercury - This file includes data on urinary mercury levels, which are used to assess exposure to mercury.
+
+P_UVOC2.XPT: Volatile Organic Compounds (VOCs) - Urine - This file contains data on urinary levels of volatile organic compounds.
+
+P_UVOC.XPT: Volatile Organic Compounds (VOCs) Metabolites - Urine - This file includes data on urinary metabolites of volatile organic compounds.
+
+P_VOCWB.XPT: Volatile Organic Compounds (VOCs) in Whole Blood - This file contains data on levels of volatile organic compounds in whole blood.
+
+UM_J.XPT: Metals - Urine - This file includes data on urinary levels of various metals, which can be used to assess exposure to heavy metals.
+
+WHQ_J.XPT: Weight History - This file contains data on the weight history of individuals, including information on weight changes over time.
