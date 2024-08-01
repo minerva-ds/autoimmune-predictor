@@ -154,6 +154,6 @@ To further refine the analysis and provide more comprehensive recommendations, t
 - **Expand Insights**: Delve into risk management, customer insights, and competitive analysis.
 
 ## For More Information
-See the full analysis in the [Jupyter Notebook](./notebook.ipynb) or review this [presentation](./presentation.pdf).
+See the full analysis in the [Jupyter Notebook](./index.ipynb) or review this [presentation](./presentation.pdf).
 
 For additional info, contact [Chisum Lindauer](chisum@atrixtech.com).
