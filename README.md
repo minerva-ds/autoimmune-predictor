@@ -1,4 +1,4 @@
-![Data Preparation](./images/data-preparation-header.jpg)
+![Data Preparation](./images/t-cell.jpg)
 
 # Identifying Risk Factors for Autoimmune Conditions
 
