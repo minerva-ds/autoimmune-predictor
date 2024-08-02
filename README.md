@@ -1,6 +1,6 @@
-![Data Preparation](./images/t-cell.jpg)
-
 # Identifying Risk Factors for Autoimmune Conditions
+
+![Data Preparation](./images/t-cell.jpg)
 
 **Author**: [Chisum Lindauer](chisum@atrixtech.com)
 
@@ -9,9 +9,15 @@ This project aims to identify risk factors for autoimmune conditions, focusing o
 
 Data preparation was extensive, involving extraction from XPT files, cleaning, encoding, and feature selection using domain knowledge and data dictionaries. Exploratory Data Analysis (EDA) was conducted iteratively, utilizing heatmaps for correlation visualization, histograms for distribution analysis, and boxplots for outlier detection and correction. The Random Forest algorithm was employed to identify important features, while XGBoost and LightGBM were tested for their performance, with XGBoost benefiting from GPU acceleration. Logistic Regression was used to assess the predictive power of features, leveraging scikit-learn for model training and statsmodels for p-value computation.
 
-Random Forest identified key features influencing arthritis, handling missing target data effectively with -1 encoding. XGBoost demonstrated quick training times due to GPU support, whereas LightGBM, despite parameter tuning, underperformed without source compilation. Logistic Regression was used to identify features that had an affect on arthritis using p-values < .05 and was the main focus as it is the most accepted method for identifying risk factors.  F1 was the metric optimized for as it provides good class 1 recall balanced with how accurate that classification is.
+Random Forest identified key features influencing arthritis, handling missing target data effectively with -1 encoding. XGBoost demonstrated quick training times due to GPU support, whereas LightGBM, despite parameter tuning, underperformed without source compilation. Logistic Regression was used to identify features that had an effect on arthritis using p-values < .05 and was the main focus as it is the most accepted method for identifying risk factors. F1 was the metric optimized for as it provides good class 1 recall balanced with how accurate that classification is.
 
-The results were interpreted using domain knowledge, highlighting the significant predictors of arthritis. Future improvements include developing multiple feature sets and models, employing Variance Inflation Factor (VIF) to address multicollinearity, correcting data skewness, and using optuna to find hyper parameters. These steps can enhance the model's f1 score, giving us more accurate results.
+The results were interpreted using domain knowledge, highlighting the significant predictors of arthritis. Future improvements include developing multiple feature sets and models, employing Variance Inflation Factor (VIF) to address multicollinearity, correcting data skewness, and using Optuna to find hyperparameters. These steps can enhance the model's F1 score, giving us more accurate results.
+
+## Reproducibility
+- An `environment.yml` file is included to see all of the installed modules from conda in my environment.
+- Models were stored in the `models/` directory allowing you to use and run them for yourself.
+- The code uses extensive markdown and comments.
+- A custom data downloader was created so that you can simply run the file and it will download files to your `data/xpt` folder. It does, however, depend on the CDC not changing their URL structure and on their website being up.
 
 ## Business Understanding
 - **Goal**: Identify and provide actionable insights on the risk factors for arthritis.
@@ -28,7 +34,7 @@ The results were interpreted using domain knowledge, highlighting the significan
 ### Visualizations
 1. **Target Label Distribution Encoded**:
    ![Target Label Distribution Encoded](./images/target-distribution.png)
-   *Description*: A survey question let people self identify if they were diagnosed with arthritis, this is the distribution after it was encoded for -1 to be missing responses.
+   *Description*: A survey question let people self-identify if they were diagnosed with arthritis. This is the distribution after it was encoded for -1 to be missing responses.
 
 2. **Label and Risk Factors Correlation Matrix**:
    ![Correlation Matrix](./images/correlation-matrix-full.png)
@@ -36,10 +42,10 @@ The results were interpreted using domain knowledge, highlighting the significan
 
 3. **Risk Factors Continuous Data**:
    ![Risk Factors Continuous Data](./images/continuous-data.png)
-   *Description*: Box Plots of how some selected features with p-values < .05 for predicting arthritis are distributed when grouped into each classification (missing, does not have arthritis and does have arthritis).
+   *Description*: Box Plots of how some selected features with p-values < .05 for predicting arthritis are distributed when grouped into each classification (missing, does not have arthritis, and does have arthritis).
 
    ![Risk Factors Continuous Data](./images/continuous-data-zoomed-in.png)
-   *Description*: Zoomed in Box Plots in above so you can see more detail on the main distributions.
+   *Description*: Zoomed-in Box Plots above show more detail on the main distributions.
 
 4. **Risk Factors Discrete Data**:
    ![Risk Factors Discrete Data](./images/discrete-data.png)
@@ -53,7 +59,7 @@ The analysis identified several key risk factors for arthritis, including dietar
 The following analysis categorizes the identified risk factors for arthritis based on their statistical significance (p < 0.05). The factors are divided into several categories: environmental factors, known risk factors, early warning signs, ways to diagnose, and other relevant factors. For each factor, the conditions that may increase the risk of arthritis are indicated as well as a brief analysis.
 
 ## Disclaimer
-P-values are a tried and true method for finding risk factors, but a relationship does not guarantee it is a risk factor. This is done with novice domain knowledge, and risk factors must be assessed by medical professionals and other experts past this.
+While p-values are useful for identifying potential risk factors, correlation does not imply causation. Interpret these relationships with caution, and seek further validation from medical professionals. This analysis was conducted with novice domain knowledge, and findings are not definitive without expert review. More thorough examination of distributions and complex relationships is needed to determine their impact on arthritis risk, but this is a good first step.
 
 ## 1. Environmental Factors
 
@@ -146,12 +152,18 @@ P-values are a tried and true method for finding risk factors, but a relationshi
 - **Ever had gallbladder surgery? [P_MCQ]:** (Yes increases risk) History of gallbladder issues can indicate metabolic problems.
 
 ## Next Steps
-To further refine the analysis and provide more comprehensive recommendations, the following next steps are suggested:
-- **More Safety Analysis**: Utilize additional data sources to explore more features.
-- **Market Analysis**: Identify profitable services and locations.
-- **Cost Analysis**: Investigate maintenance costs, regulatory costs, and other expenses.
-- **Analyze Company Strengths**: Leverage data to identify strengths in the aviation industry.
-- **Expand Insights**: Delve into risk management, customer insights, and competitive analysis.
+
+### Improvements On Project
+1. **Make Additional Models with Split Features**: Develop models using different subsets of features to understand their individual contributions and improve overall model performance.
+2. **Employ Variance Inflation Factor (VIF)**: Use VIF to identify and address multicollinearity in the dataset, ensuring that the features used in the models are not highly correlated.
+3. **Further Test Methods to Address Skew and Imbalanced Classes**: Continue exploring advanced techniques for handling skewed distributions and imbalanced classes, such as alternative resampling methods and synthetic data generation.
+4. **Use Optuna for Hyperparameter Optimization**: Implement Optuna for automated and efficient hyperparameter tuning to optimize model performance.
+
+### Expanding The Project
+1. **Analyse More Datasets**: Expand the analysis to include additional and more comprehensive datasets. This could involve integrating data from other health surveys, genetic databases, or longitudinal studies to provide a more holistic understanding of the risk factors for autoimmune conditions.
+2. **Refine Models**: Continue refining the models to improve their accuracy. This includes exploring additional hyperparameter tuning, applying advanced feature engineering techniques, and experimenting with different model architectures.
+3. **Investigate Unknown Environmental Factors**: Conduct in-depth investigations into the currently unknown environmental factors that may trigger autoimmune diseases. This involves examining a wide range of potential influences, such as pollutants, dietary habits, lifestyle choices, and geographical factors.
+4. **Investigate Rising Prevalence of Autoimmune Disorders**: Explore why autoimmune disorders are on the rise. This could include studying trends over time, analyzing changes in environmental exposures, and investigating shifts in population health behaviors or genetic predispositions.
 
 ## For More Information
 See the full analysis in the [Jupyter Notebook](./index.ipynb) or review this [presentation](./presentation.pdf).
