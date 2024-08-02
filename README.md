@@ -1,4 +1,4 @@
-# Identifying Risk Factors for Autoimmune Conditions
+# Identifying Risk Factors for Arthritis
 
 ![Data Preparation](./images/t-cell.jpg)
 
